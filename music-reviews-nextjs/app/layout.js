@@ -2,7 +2,7 @@ import MainHeader from '@/components/main-header/main-header';
 import './globals.css';
 
 export const metadata = {
-  title: 'Music Reviews',
+  title: 'Afterhours Music Reviews',
   description: 'Music Reviews, shared by a music-loving community.',
 };
 
