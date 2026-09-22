@@ -1,10 +1,16 @@
+
+
 import Link from 'next/link';
 import Image from 'next/image';
 import logoImg from '@/assets/logo.png'
 import classes from './main-header.module.css';
 import MainHeaderBackground from './main-header-background';
+import NavLink from './nav-link';
 
 export default function MainHeader() {
+
+
+
   return (
 
     <>
@@ -18,8 +24,12 @@ export default function MainHeader() {
 
         <nav className={classes.nav}>
           <ul>
-            <li><Link href="/reviews">Browse Reviews</Link></li>
-            <li><Link href="/community">Community</Link></li>
+            <li>
+              <NavLink href="/reviews">Browse Reviews</NavLink>
+            </li>
+            <li>
+              <NavLink href="/community">Community</NavLink>
+            </li>
           </ul>
         </nav>
 

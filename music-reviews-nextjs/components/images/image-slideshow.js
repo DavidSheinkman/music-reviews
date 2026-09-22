@@ -7,7 +7,7 @@ import AphexTwin from '@/assets/AphexTwin.avif';
 import FatimaYamaha from '@/assets/FatimaYamaha.avif';
 import FloatingPoints from '@/assets/FloatingPoints.avif';
 import Gas from '@/assets/Gas.avif';
-import OctaveOne from '@/assets/OctaveOne.avif';
+import Efdemin from '@/assets/Efdemin.avif';
 import RivalConsoles from '@/assets/RivalConsoles.avif';
 import Shx from '@/assets/Shx.avif';
 import classes from './image-slideshow.module.css';
@@ -16,7 +16,7 @@ const images = [
   { image: AphexTwin, alt: 'Aphex Twin album cover' },
   { image: FloatingPoints, alt: 'Floating Points album cover' },
   { image: Gas, alt: 'Gas album cover' },
-  { image: OctaveOne, alt: 'Octave One album cover' },
+  { image: Efdemin, alt: 'Efdemin album cover' },
   { image: RivalConsoles, alt: 'Rival Consoles album cover' },
   { image: Shx, alt: 'SHXCXCHCXSH album cover' },
   { image: FatimaYamaha, alt: 'Fatima Yamaha album cover' },
