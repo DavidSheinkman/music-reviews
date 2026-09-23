@@ -2,9 +2,15 @@ import ReviewsGrid from '@/components/reviews/reviews-grid';
 import classes from './page.module.css';
 import Link from 'next/link';
 import { getReviews } from '@/lib/reviews';
+import { Suspense } from 'react';
 
-export default async function ReviewsPage() {
+
+async function Reviews() {
   const reviews = await getReviews();
+  return <ReviewsGrid reviews={reviews} />
+}
+
+export default function ReviewsPage() {
   return (
 
     <>
@@ -21,7 +27,9 @@ export default async function ReviewsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <ReviewsGrid reviews={reviews} />
+        <Suspense fallback={<p className={classes.loading}>Fetching reviews...</p>}> 
+          <Reviews />
+        </Suspense>
 
       </main>
     </>
