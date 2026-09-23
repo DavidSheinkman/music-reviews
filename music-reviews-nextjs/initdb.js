@@ -8,7 +8,7 @@ const dummyReviews = [
     image: '/images/AphexTwin.avif',
     summary:
       'A haunting synth-pop album that blends nostalgic 80s textures with modern production.',
-    instructions: `
+    content: `
       1. First impressions:
          The opening track sets a moody, atmospheric tone with lush pads and a driving bassline.
 
@@ -30,7 +30,7 @@ const dummyReviews = [
     image: '/images/Efdemin.avif',
     summary:
       'A fiery, genre-bending hip-hop record infused with global rhythms and bold lyricism.',
-    instructions: `
+    content: `
       1. First impressions:
          The album kicks off with aggressive percussion and sharp, confident verses.
 
@@ -52,7 +52,7 @@ const dummyReviews = [
     image: '/images/FatimaYamaha.avif',
     summary:
       'A delicate indie-folk EP built around intricate vocal layering and gentle instrumentation.',
-    instructions: `
+    content: `
       1. First impressions:
          Soft acoustic guitar and close vocal harmonies create an intimate, warm atmosphere.
 
@@ -74,7 +74,7 @@ const dummyReviews = [
     image: '/images/FloatingPoints.avif',
     summary:
       "A warm, familiar pop-rock album that's always an easy, feel-good listen.",
-    instructions: `
+    content: `
       1. First impressions:
          Bright, jangly guitars and sing-along melodies dominate from the first track.
 
@@ -96,7 +96,7 @@ const dummyReviews = [
     image: '/images/Gas.avif',
     summary:
       'A vibrant, hand-crafted Italian pop record bursting with fresh melodies and bright arrangements.',
-    instructions: `
+    content: `
       1. First impressions:
          The album opens with a lively accordion riff and a rising vocal melody that immediately grabs attention.
 
@@ -118,7 +118,7 @@ const dummyReviews = [
     image: '/images/RivalConsoles.avif',
     summary:
       'A crisp, classic-sounding Austrian rock record with a golden-era charm.',
-    instructions: `
+    content: `
       1. First impressions:
          The opening riff is pounded out with an even, driving thickness that carries the whole record.
 
@@ -140,7 +140,7 @@ const dummyReviews = [
     image: '/images/Shx.avif',
     summary:
       'A light and refreshing indie-pop single, ripe with bright melodies and a tangy groove.',
-    instructions: `
+    content: `
       1. First impressions:
         The track opens with sliced, sparkling synth lines arranged over a laid-back beat.
     
@@ -165,7 +165,7 @@ db.prepare(`
        title TEXT NOT NULL,
        image TEXT NOT NULL,
        summary TEXT NOT NULL,
-       instructions TEXT NOT NULL,
+       content TEXT NOT NULL,
        creator TEXT NOT NULL,
        creator_email TEXT NOT NULL
     )
@@ -179,7 +179,7 @@ async function initData() {
          @title,
          @image,
          @summary,
-         @instructions,
+         @content,
          @creator,
          @creator_email
       )
