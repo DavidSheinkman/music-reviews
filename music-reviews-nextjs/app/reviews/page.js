@@ -1,8 +1,10 @@
 import ReviewsGrid from '@/components/reviews/reviews-grid';
 import classes from './page.module.css';
 import Link from 'next/link';
+import { getReviews } from '@/lib/reviews';
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const reviews = await getReviews();
   return (
 
     <>
@@ -19,7 +21,7 @@ export default function ReviewsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <ReviewsGrid reviews={[]} />
+        <ReviewsGrid reviews={reviews} />
 
       </main>
     </>

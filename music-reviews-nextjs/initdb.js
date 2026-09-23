@@ -5,7 +5,7 @@ const dummyReviews = [
   {
     title: 'Midnight Echoes',
     slug: 'midnight-echoes',
-    image: '/images/midnight-echoes.jpg',
+    image: '/images/AphexTwin.avif',
     summary:
       'A haunting synth-pop album that blends nostalgic 80s textures with modern production.',
     instructions: `
@@ -27,7 +27,7 @@ const dummyReviews = [
   {
     title: 'Fire & Spice',
     slug: 'fire-and-spice',
-    image: '/images/fire-and-spice.jpg',
+    image: '/images/Efdemin.avif',
     summary:
       'A fiery, genre-bending hip-hop record infused with global rhythms and bold lyricism.',
     instructions: `
@@ -49,7 +49,7 @@ const dummyReviews = [
   {
     title: 'Folded Harmonies',
     slug: 'folded-harmonies',
-    image: '/images/folded-harmonies.jpg',
+    image: '/images/FatimaYamaha.avif',
     summary:
       'A delicate indie-folk EP built around intricate vocal layering and gentle instrumentation.',
     instructions: `
@@ -71,7 +71,7 @@ const dummyReviews = [
   {
     title: 'Comfort Chords',
     slug: 'comfort-chords',
-    image: '/images/comfort-chords.jpg',
+    image: '/images/FloatingPoints.avif',
     summary:
       "A warm, familiar pop-rock album that's always an easy, feel-good listen.",
     instructions: `
@@ -93,7 +93,7 @@ const dummyReviews = [
   {
     title: 'Slice of Napoli',
     slug: 'slice-of-napoli',
-    image: '/images/slice-of-napoli.jpg',
+    image: '/images/Gas.avif',
     summary:
       'A vibrant, hand-crafted Italian pop record bursting with fresh melodies and bright arrangements.',
     instructions: `
@@ -115,7 +115,7 @@ const dummyReviews = [
   {
     title: 'Golden Cutlet',
     slug: 'golden-cutlet',
-    image: '/images/golden-cutlet.jpg',
+    image: '/images/RivalConsoles.avif',
     summary:
       'A crisp, classic-sounding Austrian rock record with a golden-era charm.',
     instructions: `
@@ -137,7 +137,7 @@ const dummyReviews = [
   {
     title: 'Fresh Vinyl Cuts',
     slug: 'fresh-vinyl-cuts',
-    image: '/images/fresh-vinyl-cuts.jpg',
+    image: '/images/Shx.avif',
     summary:
       'A light and refreshing indie-pop single, ripe with bright melodies and a tangy groove.',
     instructions: `

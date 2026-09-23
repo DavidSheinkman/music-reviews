@@ -1,4 +1,5 @@
 import classes from './reviews-grid.module.css';
+import ReviewItem from './review-item';
 
 export default function ReviewsGrid({ reviews }) {
 
