@@ -1,8 +1,12 @@
 import classes from './page.module.css';
 
 import ImagePicker from '@/components/reviews/image-picker';
+import { shareReview } from '@/lib/actions';
 
 export default function ShareReviewPage() {
+
+
+
   return (
     <>
       <header className={classes.header}>
@@ -12,7 +16,7 @@ export default function ShareReviewPage() {
         <p>Or any other music review you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form}>
+        <form className={classes.form} action={shareReview}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -32,15 +36,15 @@ export default function ShareReviewPage() {
             <input type="text" id="summary" name="summary" required />
           </p>
           <p>
-            <label htmlFor="instructions">Content</label>
+            <label htmlFor="content">Content</label>
             <textarea
-              id="instructions"
-              name="instructions"
+              id="content"
+              name="content"
               rows="10"
               required
             ></textarea>
           </p>
-          <ImagePicker />
+          <ImagePicker label="Your Image" name="image" />
           <p className={classes.actions}>
             <button type="submit">Share Review</button>
           </p>

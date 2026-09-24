@@ -17,7 +17,8 @@ export default function ImagePicker({ label, name }) {
     function handleImageChange(event) {
         const file = event.target.files[0];
         if (!file) {
-           return;
+            setPickedImage(null);
+            return;
         }
 
         const fileReader = new FileReader();
@@ -34,7 +35,7 @@ export default function ImagePicker({ label, name }) {
 
             <div className={classes.preview}>
                 {!pickedImage && <p>No image picked yet.</p>}
-                {pickedImage && <Image src={pickedImage} alt="The image selected by the user" fill/>}
+                {pickedImage && <Image src={pickedImage} alt="The image selected by the user" fill />}
             </div>
             <div className={classes.controls}>
                 <input
@@ -44,6 +45,7 @@ export default function ImagePicker({ label, name }) {
                     name={name}
                     ref={imageInput}
                     onChange={handleImageChange}
+                    required
                 />
                 <button className={classes.button} type="button" onClick={handlePickClick}>
                     Pick an Image
