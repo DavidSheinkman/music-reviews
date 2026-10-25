@@ -4,6 +4,7 @@ import Image from 'next/image';
 import classes from './review-item.module.css';
 
 export default function ReviewItem({ title, slug, image, summary, creator }) {
+  console.log("title:", title, "image:", image );
   return (
     <article className={classes.review}>
       <header>

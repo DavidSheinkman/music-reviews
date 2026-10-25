@@ -1,5 +1,8 @@
 'use server';
 
+import { saveRreview } from './reviews';
+import { redirect } from 'next/navigation';
+
   export async function shareReview(formData) {
 
     const review = {
@@ -11,4 +14,7 @@
       creator_email: formData.get('email'),
     }
 
+    
+    await saveRreview(review);
+    redirect('/reviews');
   }
