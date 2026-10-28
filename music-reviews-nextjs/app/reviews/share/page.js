@@ -1,6 +1,7 @@
 import classes from './page.module.css';
 
 import ImagePicker from '@/components/reviews/image-picker';
+import ReviewsFormSubmit from '@/components/reviews/reviews-form-submit';
 import { shareReview } from '@/lib/actions';
 
 export default function ShareReviewPage() {
@@ -46,7 +47,7 @@ export default function ShareReviewPage() {
           </p>
           <ImagePicker label="Your Image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Review</button>
+            <ReviewsFormSubmit />
           </p>
         </form>
       </main>
