@@ -2,6 +2,7 @@
 
 import { saveRreview } from './reviews';
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 
 
   function isInvalidText(text) {
@@ -37,5 +38,6 @@ import { redirect } from 'next/navigation';
 
     
     await saveRreview(review);
+    revalidatePath('/reviews');
     redirect('/reviews');
   }
