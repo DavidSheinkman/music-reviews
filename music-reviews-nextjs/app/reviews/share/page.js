@@ -1,11 +1,14 @@
-import classes from './page.module.css';
+'use client';
 
+import classes from './page.module.css';
+import { useActionState } from 'react';
 import ImagePicker from '@/components/reviews/image-picker';
 import ReviewsFormSubmit from '@/components/reviews/reviews-form-submit';
 import { shareReview } from '@/lib/actions';
 
 export default function ShareReviewPage() {
 
+  const [state, formAction] = useActionState(shareReview, { message: null });
 
 
   return (
@@ -17,7 +20,7 @@ export default function ShareReviewPage() {
         <p>Or any other music review you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={shareReview}>
+        <form className={classes.form} action={formAction}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -46,6 +49,7 @@ export default function ShareReviewPage() {
             ></textarea>
           </p>
           <ImagePicker label="Your Image" name="image" />
+          {state.message && <p>{state.message}</p>}
           <p className={classes.actions}>
             <ReviewsFormSubmit />
           </p>
