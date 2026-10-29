@@ -5,6 +5,11 @@ import { getReviews } from '@/lib/reviews';
 import { Suspense } from 'react';
 
 
+export const metadata = {
+  title: 'All Music Reviews',
+  description: 'Browse all music reviews submitted by our users. Share your favorite albums and read what others have to say!',
+};
+
 async function Reviews() {
   const reviews = await getReviews();
   return <ReviewsGrid reviews={reviews} />

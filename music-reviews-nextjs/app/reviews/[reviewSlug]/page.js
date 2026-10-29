@@ -4,6 +4,20 @@ import { getReview } from '@/lib/reviews';
 import { notFound } from 'next/navigation';
 
 
+export async function generateMetadata({ params }) {
+  const review = getReview(params.reviewSlug);
+
+  if(!review) {
+    notFound();
+  }
+
+  return {
+    title: review.title,
+    description: review.summary,
+  };
+}
+
+
 export default function ReviewDetailesPage({ params }) {
 
   const review = getReview(params.reviewSlug);
